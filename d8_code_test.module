@@ -1,0 +1,26 @@
+<?php
+
+/**
+ * @file
+ * Simple math form using the Form API.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function d8_code_test_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'help.page.d8_code_test':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('The D8 Code Test module allows a user to easily see the sum of two numbers by entering them into a form.') . '</p>';
+      $output .= '<h3>' . t('Uses') . '</h3>';
+      $output .= '<dl>';
+      $output .= '<dt>' . t('Getting the total of two numbers') . '</dt>';
+      $output .= '<dd>' . t('Users can enter two numbers on the <a href=":d8codetest">D8 Code Test</a> page and see a preview of the result in realtime before submitting. Submitting the form will result in a message being displayed that contains the two values and their sum.', array(':d8codetest' => \Drupal::url('d8_code_test.math_form'))) . '</dd>';
+      $output .= '</dl>';
+      return $output;
+  }
+}

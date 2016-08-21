@@ -1,0 +1,7 @@
+d8_code_test.math_form:
+  path: 'd8_code_test'
+  defaults:
+    _title: 'D8 Code Test'
+    _form: '\Drupal\d8_code_test\Form\MathForm'
+  requirements:
+    _permission: 'access content'

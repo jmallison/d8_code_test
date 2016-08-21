@@ -1,0 +1,5 @@
+# Define default links for this module.
+d8_code_test.math_form:
+  title: D8 Code Test
+  description: A simple Math Form using Drupal Form API.
+  route_name: d8_code_test.math_form
